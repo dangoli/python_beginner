@@ -23,7 +23,7 @@ print({t:10}) # t为key, 10为value {(10, 20, 30): 10}
 # print({lst:10}) # TypeError: unhashable type: 'list' 报错 可变数据类型不可作key
 
 # 字典属于序列
-print('max:', max(d)) # max: dog
+print('max:', max(d)) # max: dog 比较的是
 print('min:', min(d)) # min: cat
 print('len:', len(d)) # len: 2
 # 字典的删除
