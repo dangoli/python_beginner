@@ -7,5 +7,6 @@ while True:
     lines.append(line)
 
 def verify(pw): # 定义验证函数
-    
+    if len(pw) < 8: # 长度小于8就不合格
+        print("NG")
 print(lines)
