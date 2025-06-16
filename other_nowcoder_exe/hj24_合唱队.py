@@ -1,21 +1,18 @@
 n = input()
-heights = input().split(' ') # 输入身高
+#heights = input().split(' ') # 输入身高
 
 def main(): #  
-    nums = list(map(int, input().split()))
+    nums = list(map(int, input().split())) # 输入身高
     n = len(nums)
-    if n == 0:
-        print(0)
-        return
-        
-    left_inc = [1] * n
+
+    left_inc = [1] * n # 初始化每个位置的左侧递增序列
     for i in range(n):
         for j in range(i):
             if nums[j] < nums[i]:
                 if left_inc[j] + 1 > left_inc[i]:
                     left_inc[i] = left_inc[j] + 1
-                    
-    right_dec = [1] * n
+
+    right_dec = [1] * n # 初始化每个位置的右侧递减序列
     for i in range(n-2, -1, -1):
         for j in range(i+1, n):
             if nums[i] > nums[j]:
