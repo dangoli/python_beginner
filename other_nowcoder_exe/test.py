@@ -35,19 +35,6 @@ def read_grid():
         grid.append(list(s))
     return grid, h, w
 
-"""
-def read_grid():
-    data = sys.stdin.read().split() # 读取输入数据，以空格分隔
-    it = iter(data) # 创建迭代器
-    h = int(next(it)); w = int(next(it))
-    grid = [] # 读取网格(网格构建)
-    for _ in range(h):
-        s = next(it).strip()
-        while len(s) < w:
-            s += next(it).strip()
-        grid.append(list(s[:w]))
-    return grid, h, w
-"""
 def main():
     grid, h, w = read_grid()
     path = find_path_dfs_iterative(grid, h, w)
