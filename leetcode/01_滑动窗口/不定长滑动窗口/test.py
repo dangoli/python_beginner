@@ -4,16 +4,12 @@ class Solution:
         max_n = 0
         l = 0
         count_w = {}
-        count = 0
         for r, fruit in enumerate(fruits):
-            if fruit not in count_w:
-                count += 1
-            if count <= 2:
-                count_w[fruit] = r
-            else:
-                l = count_w[fruits[l]] + 1
-                count -= 1
-                count_w.pop(fruits[l]) # 弹出最后加入的
+            count_w[fruit] = r
+            if len(count_w) > 2:
+                left_fruit = min(count_w, key=count_w.get)
+                l = count_w[left_fruit] + 1
+                count_w.pop(left_fruit)
             max_n = max(max_n, r - l + 1)
         return max_n
     
