@@ -22,3 +22,8 @@ class Solution:
             else:
                 left = mid + 1
         return right
+
+weights = [1,2,3,4,5,6,7,8,9,10]
+days = 5
+s = Solution()
+print(s.shipWithinDays(weights, days))
