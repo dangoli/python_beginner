@@ -1,0 +1,1 @@
+python -m notebook --notebook-dir="D:\编程语言\GitHub\python_beginner\leetcode"
