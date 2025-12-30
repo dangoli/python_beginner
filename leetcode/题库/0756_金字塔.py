@@ -1,3 +1,6 @@
+from collections import defaultdict
+from typing import List
+
 class Solution:
     def pyramidTransition(self, bottom: str, allowed: List[str]) -> bool:
         groups = defaultdict(list)  # 三角形底部两个字母 -> [三角形顶部字母]
