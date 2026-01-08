@@ -1,6 +1,6 @@
 from typing import List
 
-# 完整的并查集模板，见我的数据结构题单
+# 并查集
 class UnionFind:
     def __init__(self, n: int):
         # 一开始有 n 个集合 {0}, {1}, ..., {n-1}
