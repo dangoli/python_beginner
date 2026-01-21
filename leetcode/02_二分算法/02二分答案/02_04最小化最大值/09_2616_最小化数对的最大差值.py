@@ -2,7 +2,6 @@ from typing import List
 
 class Solution:
     def minimizeMax(self, nums: List[int], p: int) -> int:
-        # 未
         nums.sort()
         def check(mx: int) -> bool:
             cnt = i = 0
