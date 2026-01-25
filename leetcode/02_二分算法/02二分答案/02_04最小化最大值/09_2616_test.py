@@ -11,3 +11,5 @@ def check(mx: int) -> bool:
         else:
             i += 1
     return cnt >= p
+
+print(check(4))

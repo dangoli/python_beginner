@@ -21,3 +21,8 @@ class Solution:
             else:
                 left = mid
         return right
+    
+nums = [10,1,2,7,1,3]
+p = 2
+s = Solution()
+print(s.minimizeMax(nums, p))
