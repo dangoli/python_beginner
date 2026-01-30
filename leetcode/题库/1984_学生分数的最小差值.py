@@ -5,7 +5,8 @@ class Solution:
         if k == 1:
             return 0
         nums.sort()
-        diff = []
+        """
+        diff = [] # 不要用差分！！
         for i in range(1, len(nums)):
             diff.append(nums[i] - nums[i-1])
         
@@ -22,6 +23,10 @@ class Solution:
             if diff[i + 1] < diff[left]:
                 vowel = vowel - diff[left] + diff[i + 1]
         return vowel
+        """
+        ans = float('inf')
+        for i in range(len(nums) - k + 1):
+            ans = min(ans, nums[i + k - 1] - nums[i])
     
 nums = [9,4,1,7]
 k = 2
