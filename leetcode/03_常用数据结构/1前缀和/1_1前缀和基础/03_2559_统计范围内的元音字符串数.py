@@ -7,3 +7,9 @@ class Solution:
         is_yuanyin = lambda s: s[0] in 'aeiou' and s[-1] in 'aeiou'
         s = list(accumulate(map(is_yuanyin, words),initial = 0))
         return [s[r + 1] - s[l] for l, r in queries]
+        
+    
+
+words = ["aba","bcb","ece","aa","e"]
+queries = [[0,2],[1,4],[1,1]]
+print(Solution().vowelStrings(words, queries))
